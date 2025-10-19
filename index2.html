@@ -1,76 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MUA</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
 
     <!--페이퍼로지 (눈누 폰트)-->
     <style>
-    @font-face {
-      font-family: 'Paperozi';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
-      font-weight: 100;
-      font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-display: swap;
+        }
 
-    @font-face {
-      font-family: 'Paperozi';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
-      font-weight: 200;
-      font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+            font-weight: 200;
+            font-display: swap;
+        }
 
-    @font-face {
-      font-family: 'Paperozi';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
-      font-weight: 300;
-      font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
 
-    @font-face {
-      font-family: 'Paperozi';
-      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
-      font-weight: 400;
-      font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
 
-    @font-face {
-        font-family: 'Paperozi';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
-        font-weight: 500;
-        font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
 
-    @font-face {
-        font-family: 'Paperozi';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
-        font-weight: 600;
-        font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-display: swap;
+        }
 
-    @font-face {
-        font-family: 'Paperozi';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
-        font-weight: 700;
-        font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
 
-    @font-face {
-        font-family: 'Paperozi';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
-        font-weight: 800;
-        font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-display: swap;
+        }
 
-    @font-face {
-        font-family: 'Paperozi';
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
-        font-weight: 900;
-        font-display: swap;
-    }
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+            font-weight: 900;
+            font-display: swap;
+        }
     </style>
-    
+
+<body>
+    <section id="sec11">
+        <div class="sec11-wrap">
+            <div class="sec11_item-wrap">
+                <div class="sec11_item1">
+                    <div>
+                        <img src="img/section11/sec11-logo.png" alt="logo" width="378">
+                        <p>The MUA brand aims to breathe new life into discarded <br>
+                            or near-discarded cosmetics. Refined cosmetics are reborn <br>
+                            as sensory art tools and DIY beauty kits, offering a creative experience.</p>
+                    </div>
+                </div>
+                <img src="img/section11/1.png" alt="bg1" height="1000">
+            </div>
+            <div class="sec11_item-wrap">
+                <div class="sec11_item2">
+                    <div>
+                        <span>FREEDOM&</span>
+                        <span>CREATION</span>
+                        <img src="img/section11/2-1.png" alt="sub-img" width="489">
+                        <p>OFFICE</p>
+                    </div>
+                </div>
+                <img src="img/section11/2.png" alt="bg2" height="1000">
+            </div>
+            <div class="sec11_item-wrap">
+                <div class="sec11_item3">
+                    <div>
+                        <div class="sec11-itme3-text">
+                            <p class="en">MUA is a brand that gives discarded cosmetics a new life by safely
+                                refining
+                                and<br>
+                                transforming them into tools for children’s play and learning.<br>
+                                Lipsticks, eyeshadows, and blushes are reborn as paints, crayons, or DIY beauty<br>
+                                kits, turning play into an opportunity for creativity and self-expression.<br>
+                                Children can create their own colors, express themselves through their
+                                fingertips,<br>
+                                and discover the world and the environment through small acts of creation.</p>
+                            <p class="kr">MUA는 버려지는 화장품을 안전하게 정제·가공해 아이들의 놀이와 배움의 도구로 다시 태어나게 합니다.<br>
+                                립스틱, 섀도우, 블러셔 등은 물감이나 크레용, DIY 뷰티 키트로 새롭게 변신하며, 놀이를 단순한 즐거움이 아닌<br>
+                                창의적 학습과 자기표현의 기회로 확장합니다.<br>
+                                아이들은 직접 색을 만들고 손끝으로 표현하며, 작은 창작 속에서 세상과 환경을 배우는 특별한 경험을 얻습니다.</p>
+                        </div>
+                        <div class="sec11-itme3-img">
+                            <img src="img/section11/3-1.png" alt="sub-img" height="267">
+                            <p>KIDS DRAWING ACTIVITIES</p>
+                        </div>
+                        <span>PLAY&</span>
+                        <span>LEARNING</span>
+                    </div>
+                </div>
+                <img src="img/section11/3.png" alt="bg3" height="1000">
+            </div>
+            <div class="sec11_item-wrap">
+                <div class="sec11_item4">
+                    <div>
+                        <span>ZERO</span>
+                        <span>WASTE</span>
+                        <span>&UPCYCLING</span>
+                        <div class="sec11-itme4-text">
+                            <p class="en">MUA reduces waste by putting the values of zero waste and upcycling<br>
+                                into practice. Through recyclable containers and eco-friendly packaging,<br>
+                                we create a sustainable cycle that extends from product creation to post-use.<br>
+                                In this process, MUA promotes an eco-conscious lifestyle that children and<br>
+                                society can participate in together.</p>
+                            <p class="kr">MUA는 폐기되는 자원을 줄이고, 제로 웨이스트와 업사이클링의 가치를 실천합니다.<br>
+                                재활용 가능한 용기와 친환경 패키징을 통해 제품의 탄생부터 사용 이후까지 지속 가능한 순환<br>
+                                구조를 만들어갑니다. <br>
+                                이 과정 속에서 MUA는 아이들과 사회가 함께 참여할 수 있는 친환경 라이프스타일을 제안합니다.</p>
+                        </div>
+                        <div class="sec11-itme4-img">
+                            <img src="img/section11/4-1.png" alt="sub-img" width="460">
+                            <p>DISCARDED COSMETICS</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="img/section11/4.png" alt="bg4" height="1000">
+            </div>
+        </div>
+    </section>
+</body>

@@ -1,7 +1,8 @@
 /*-----노말라이즈-----*/
 body,
 ul,
-li {
+li,
+p {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -677,6 +678,159 @@ header {
   padding-right: 6px;
 }
 
+/*-----sec11-----*/
+#sec11 {
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 7920px;
+  display: inline-block;
+}
+
+.sec11-wrap{
+  display: flex;
+}
+
+.sec11-wrap > img {
+  position: relative;
+}
+
+.sec11_item1,
+.sec11_item2,
+.sec11_item3,
+.sec11_item4 {
+  width: 1980px;
+  height: 1000px;
+  position: absolute;
+  z-index: 9999;
+  align-content: center;
+}
+
+.sec11_item1 > div {
+  z-index: 9999;
+  justify-items: center;
+  padding: 0 704px;
+}
+
+.sec11_item1 > div > p {
+  padding-top: 106px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sec11_item2 > div {
+  text-align: center;
+  z-index: 9999;
+  justify-items: center;
+}
+
+.sec11_item2 > div > span {
+  text-align: center;
+  display: block;
+  font-size: 180px;
+  font-weight: 600;
+}
+
+.sec11_item2 > div > img {
+  padding-top: 40px;
+}
+
+.sec11_item2 > div > p {
+  padding-top: 10px;
+  text-align: right;
+  width: 489px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sec11_item3 > div {
+  padding: 0 343px;
+  width: 1294px;
+  z-index: 9999;
+  justify-content: center;
+  align-content: center;
+}
+
+.sec11_item3 > div > .sec11-itme3-text {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+}
+
+.sec11_item3 > div > .sec11-itme3-text > p,
+.sec11_item4 > div > .sec11-itme4-text > p {
+  padding-bottom: 77px;
+}
+
+.sec11_item3 > div > p:last-child {
+  padding-top: 10px;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.sec11_item3 > div > span {
+  display: block;
+  font-size: 180px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.sec11_item3 > div > span:last-child {
+  text-align: right;
+}
+
+.sec11_item3 > div > .sec11-itme3-text > p,
+.sec11_item4 > div > .sec11-itme4-text > p {
+  color: #000000;
+}
+
+
+.sec11_item3 > div > .sec11-itme3-text,
+.sec11_item3 > div > .sec11-itme3-img,
+.sec11_item4 > div > .sec11-itme4-text,
+.sec11_item4 > div > .sec11-itme4-img {
+  display: inline-block;
+}
+
+.sec11_item3 > div > .sec11-itme3-img {
+  padding-left: 107px;
+}
+
+.sec11_item3 > div > .sec11-itme3-img > p,
+.sec11_item4 > div > .sec11-itme4-img > p {
+  padding-top: 10px;
+  text-align: right;
+  color: #fff;
+}
+
+.sec11_item4 > div {
+  padding: 0 346px;
+  z-index: 9999;
+  justify-content: center;
+  align-content: center;
+}
+
+.sec11_item4 > div > span {
+  display: block;
+  font-size: 180px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.sec11_item4 > div > span:nth-child(2){
+  text-align: center;
+}
+
+.sec11_item4 > div > .sec11-itme4-img > p {
+  color: #000000;
+}
+
+.sec11-itme4-img {
+  padding-left: 128px;
+}
+
 /*-----add button, wrap, price 공통-----*/
 .add-button > li {
   width: 220px;
@@ -714,6 +868,9 @@ header {
 .item > li:first-child {
   padding-bottom: 35px;
 }
+.item2 {
+  cursor: pointer;
+}
 
 .item2 > li:first-child {
   padding-bottom: 6px;
@@ -746,6 +903,13 @@ header {
   left: 0;
   opacity: 0;
   z-index: 1;
+}
+
+.en,
+.kr {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 /* 호버 시 전환 */
@@ -825,3 +989,5 @@ footer {
   font-size: 36px;
   font-weight: 800;
 }
+
+/*-----서브 페이지-----*/
