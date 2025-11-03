@@ -6,3 +6,21 @@ $(".con__menu-item").hover(
     $(".con__menu-item_bg").removeClass("active");
   }
 );
+
+const swiperSec1 = new Swiper('.mySwiperSec1', {
+  spaceBetween: 48,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
+
+const swiperMain = new Swiper('.mySwiperMain', {
+  slidesPerView: 'auto',
+  spaceBetween: 24,
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+  freeMode: true,
+});
