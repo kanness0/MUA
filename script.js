@@ -13,6 +13,9 @@ const swiperSec1 = new Swiper('.mySwiperSec1', {
     el: '.swiper-pagination',
     clickable: true,
   },
+  autoplay: {
+    delay: 4000,
+  },
 });
 
 const swiperMain = new Swiper('.mySwiperMain', {

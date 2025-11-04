@@ -166,6 +166,10 @@ header {
   transition: transform 0.3s ease;
 }
 
+.swiper-pagination-bullet {
+  background: white;
+}
+
 /*-----sec2-----*/
 .sec2_img {
   padding-top: 140px;
@@ -234,7 +238,7 @@ header {
   background-color: #fff;
   color: #0d0d0d;
   opacity: 70%;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 
 .sec3_menu > li > a {
@@ -276,26 +280,23 @@ header {
   padding-left: 10px;
 }
 
-.swiper .swiper-scrollbar {
-  position: relative;
-  left: auto !important;
-  right: auto !important;
-  width: 100%;
-  height: 4px;               
-  margin: 24px auto 0;        
+.swiper .swiper-scrollbar { 
   background: rgba(255,255,255,0.12);
-  border-radius: 6px;
-  overflow: visible;
+  width: 1485px !important; 
+  left: 0;
 }
 
-.swiper .swiper-scrollbar-drag {
+.swiper .swiper-scrollbar-drag  {
   background: #ffffff;
+}
+
+/* .swiper .swiper-scrollbar-drag {
   width: 120px !important; 
   height: 3px;
   border-radius: 6px;
   transition: background .2s ease;
   box-shadow: none;
-}
+} */
 
 .swiper {
   width: 100vw;          
@@ -331,10 +332,10 @@ header {
 
 #sec5 .sec5_box {
   position: relative;
-  background-color: #0d0d0d;
+  background-color: #ededed;
   display: block;
   overflow: visible;
-  height: 2310px;
+  height: 2019px;
 }
 
 #sec5 .sec5_box > .sec5-back,
@@ -352,7 +353,7 @@ header {
 
 #sec5 .sec5_box > .sec5_article {
   z-index: 99;
-  bottom: -305px;
+  bottom: -300px;
   top: auto;
 }
 
@@ -362,10 +363,33 @@ header {
   height: auto;
 }
 
-.sec5-item {
-  z-index: 999;
-  position: relative;
-  display: none;
+.sec5-item-wrap > div {
+  z-index: 100;
+  position: absolute;
+}
+
+.sec5-item-wrap .sec5-item_01 {
+  width: 440px;
+  bottom: 600px;
+  left: -100px;
+}
+
+.sec5-item-wrap .sec5-item_02 {
+  width: 1085px;
+  bottom: 40px;
+  right: -300px;
+}
+
+.sec5-item-wrap .sec5-item_03 {
+  width: 325px;
+  top: 220px;
+  right: 60px;
+}
+
+.sec5-item-wrap .sec5-item_04 {
+  width: 325px;
+  top: 75px;
+  right: 277px;
 }
 
 /*-----sec6-----*/
@@ -872,6 +896,10 @@ header {
   width: 1510px;
   display: flex;
   justify-content: space-between;
+}
+
+.price {
+  padding-top: 5px;
 }
 
 .price > span:last-child{
