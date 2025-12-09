@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MUA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+
+    <!--페이퍼로지 (눈누 폰트)-->
+    <style>
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-1Thin.woff2') format('woff2');
+            font-weight: 100;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-2ExtraLight.woff2') format('woff2');
+            font-weight: 200;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-3Light.woff2') format('woff2');
+            font-weight: 300;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-4Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-5Medium.woff2') format('woff2');
+            font-weight: 500;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-6SemiBold.woff2') format('woff2');
+            font-weight: 600;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-7Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+            font-weight: 800;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Paperozi';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-9Black.woff2') format('woff2');
+            font-weight: 900;
+            font-display: swap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="con">
+        <header class="con top-bar">
+            <div class="con__box">
+                <div class="con__menu-logo">
+                    <img src="img/header/MUA-logo.png" alt="브랜드 로고" width="68" height="39" />
+                </div>
+                <div class="flex-grow-1"></div>
+                <ul class="con__menu-item">
+                    <li>
+                        <a href="index.html">브랜드</a>
+                        <ul class="sub-inner brand">
+                            <li><a href="#">브랜드 소개</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">키트샵</a>
+                        <ul class="sub-inner shop">
+                            <li><a href="#">DIY 키트</a></li>
+                            <li><a href="#">리필 상품</a></li>
+                            <li><a href="#">제휴 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">클래스</a>
+                        <ul class="sub-inner class">
+                            <li><a href="#">온/오프라인 수업</a></li>
+                            <li><a href="#">기관/학교 수업</a></li>
+                            <li><a href="#">수업 후기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">환경캠페인</a>
+                        <ul class="sub-inner collection">
+                            <li><a href="#">공병 수거 신청</a></li>
+                            <li><a href="#">참여 후기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">이벤트</a>
+                        <ul class="sub-inner event">
+                            <li><a href="#">SNS 챌린지 후기</a></li>
+                            <li><a href="#">이벤트 안내</a></li>
+                            <li><a href="#">리워드 쿠폰</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="con__menu-item_bg"></div>
+                <div class="flex-grow-1"></div>
+                <ul class="con__menu-icon">
+                    <li><a href="#"><img src="img/header/search.png" alt="검색" /></a></li>
+                    <li><a href="#"><img src="img/header/cart.png" alt="카트" /></a></li>
+                    <li><a href="#"><img src="img/header/user.png" alt="회원" /></a></li>
+                </ul>
+            </div>
+        </header>
+    </div>
+
+    <section id="sec12">
+        <div class="swiper mySwiperSec12">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/sub-img/슬라이드 이미지.png" alt="이미지 1" height="520" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/sub-img/슬라이드 이미지-1.png" alt="이미지 1" height="520" />
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#">
+                        <img src="img/sub-img/슬라이드 이미지-2.png" alt="이미지 1" height="520" />
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section id="sec13">
+        <div class="sec13_menu_wrap menu">
+            <ul class="sec13_menu">
+                <li><a href="#">#ALL</a></li>
+                <li><a href="#">#키트</a></li>
+                <li><a href="#">#리필</a></li>
+                <li><a href="#">#문구용품</a></li>
+                <li><a href="#">#미술용품</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sec13-sub">
+        <div class="sec13_sub-menu_wrap menu">
+            <ul class="sec13_sub-menu">
+                <li><a href="#">총 70개</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        신상품순
+                        <svg class="dropdown-icon" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L6 6L11 1" stroke="#333" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">신상품순</a></li>
+                        <li><a href="#">낮은가격순</a></li>
+                        <li><a href="#">높은가격순</a></li>
+                        <li><a href="#">인기순</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sec14">
+        <div class="sec14_item-box">
+            <ul class="sec14_item1 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img-7.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-6.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 내 손으로 만든 크레용 키트</span>
+                    <div class="sec14_price price">
+                        <span>45%</span>
+                        <span>13,750원</span>
+                        <span>25,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>201건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item2 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section3/body_item_img4.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-1.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 업사이클 DIY 립밤 키트</span>
+                    <div class="sec14_price price">
+                        <span>15%</span>
+                        <span>16,900원</span>
+                        <span>19,900</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>154건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item3 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img-8.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-5.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 컬러 파우더 체리 레드 컬러 2개입 10g</span>
+                    <div class="sec14_price price">
+                        <span>20%</span>
+                        <span>1,040원</span>
+                        <span>1,300</span>
+                    </div>
+                    <div class="sec6_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>123건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item4 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img-9.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-4.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>천연 립글로스 글로우 & 글리터 1세트</span>
+                    <div class="sec14_price price">
+                        <span>23%</span>
+                        <span>3,850원</span>
+                        <span>5,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>78건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item5 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img-10.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-3.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 컬러 파우더 네온 그린 2개입 10g</span>
+                    <div class="sec14_price price">
+                        <span>20%</span>
+                        <span>1,040원</span>
+                        <span>1,300</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>112건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item6 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img-11.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-17.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 무지 스프링 공책 A6사이즈 & 0.75 펜 세트</span>
+                    <div class="sec14_price price">
+                        <span>30%</span>
+                        <span>2,400원</span>
+                        <span>3,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>102건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item7 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section8/body_item_img-3.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-15.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>재사용모 빽붓, 평붓, 바탕붓 낱자루 1-6호 [옵션선택]</span>
+                    <div class="sec14_price price">
+                        <span>34%</span>
+                        <span>5,148원</span>
+                        <span>7,800</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>49건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item8 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img13.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-14.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 과일 스티커팩 12매</span>
+                    <div class="sec14_price price">
+                        <span>5%</span>
+                        <span>2,090원</span>
+                        <span>2,200</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>66건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item9 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section3/body_item_img2.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-8.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 스티커 a타입, b타입 (2매)</span>
+                    <div class="sec14_price price">
+                        <span>20%</span>
+                        <span>1,600원</span>
+                        <span>2,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>180건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item10 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section8/body_item_img-1.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-9.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 아동용 크레용 8색</span>
+                    <div class="sec14_price price">
+                        <span>34%</span>
+                        <span>5,280원</span>
+                        <span>8,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>75건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item11 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section3/body_item_img3.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-7.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 가성비 HB 연필 세트</span>
+                    <div class="sec14_price price">
+                        <span>15%</span>
+                        <span>4,250원</span>
+                        <span>5,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>154건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item12 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section3/body_item_img5.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-16.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 무지 스프링 공책 A6 사이즈</span>
+                    <div class="sec14_price price">
+                        <span>20%</span>
+                        <span>1,600원</span>
+                        <span>2,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>137건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item13 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section6/body_item_img-12.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-2.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 립오일 베이스 30ml</span>
+                    <div class="sec14_price price">
+                        <span>40%</span>
+                        <span>4,800원</span>
+                        <span>8,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>45건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item14 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section8/body_item_img-2.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-13.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>재사용모 낱자루 3개입</span>
+                    <div class="sec14_price price">
+                        <span>34%</span>
+                        <span>3,300원</span>
+                        <span>5,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>84건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item15 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/section8/body_item_img.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 색연필 8색</span>
+                    <div class="sec14_price price">
+                        <span>20%</span>
+                        <span>6,000원</span>
+                        <span>7,500</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>41건</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="sec14_item16 item">
+                <li>
+                    <div class="img-wrap">
+                        <img src="img/sub-img/body_item_img.png" alt="상품이미지" class="front" width="354" />
+                        <img src="img/hover_img/body_item_img-18.png" alt="hover-img" class="back" width="354" />
+                    </div>
+                </li>
+                <li>
+                    <span>MUA 립 베이스 왁스 매트타입, 글로시 타입</span>
+                    <div class="sec14_price price">
+                        <span>34%</span>
+                        <span>3,300원</span>
+                        <span>5,000</span>
+                    </div>
+                    <div class="sec14_reveiw reveiw">
+                        <img src="img/section3/star.png" alt="별" width="15" />
+                        <span>231건</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sec15">
+        <div class="sec15-item_wrap">
+            <ul class="sec15-item-tab">
+                <li>
+                    <a href="#">
+                        <img src="img/sub-img/Group 300.png" alt="tab-bar" height="235">
+                    </a>
+                </li>
+            </ul>
+            <ul class="sec15-item-icon">
+                <li>
+                    <a href="#"><img src="img/sub-img/Instagram.png" alt="인스타 아이콘"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/sub-img/Instagram-1.png" alt="고객센터 아이콘"></a>
+                </li>
+                <li>
+                    <a href="#"><img src="img/sub-img/up.png" alt="업 버튼 아이콘"></a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="inner_container">
+            <span class="profile profile1 "></span>
+            <span class="profile profile2 active"></span>
+            <span class="profile profile3 "></span>
+        </div>
+        <div class="paginator_sec">
+            <span class="arrow right"></span>
+            <div class="paginator_box">
+                <span class="page page1 " data-class="1">1</span>
+                <span class="page page2 active" data-class="2">2</span>
+                <span class="page page3" data-class="3">3</span>
+            </div>
+            <span class="arrow left"></span>
+
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="footer_con">
+        <div class="footer_con_item1">
+            <ul class="footer-logo">
+                <li>
+                    <img src="img/footer/MUA-logo.png" alt="푸터 로고" width="82" height="45" />
+                </li>
+            </ul>
+            <ul class="footer-top">
+                <li><span>이용약관</span></li>
+                <li><span>|</span></li>
+                <li><span>개인정보처리방침</span></li>
+                <li><span>|</span></li>
+                <li><span>배송 및 반품 정책</span></li>
+                <li><span>|</span></li>
+                <li><span>리필 신청 안내</span></li>
+            </ul>
+            <ul class="footer-middle">
+                <li><span>대표 : 김빛나리</span></li>
+                <li><span>|</span></li>
+                <li><span>사업자등록번호: 123-45-67890</span></li>
+                <li><span>|</span></li>
+                <li><span>통신판매업신고: 제2025-서울강남-0000호</span></li>
+                <li><span>|</span></li>
+                <li><span>주소: 서울특별시 강남구 신사동 123-4</span></li>
+            </ul>
+            <ul class="footer-bottom">
+                <li>
+                    <span>ⓒ 2025 MUA. All rights reserved. Hosting by MUA Studio</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer_con_item2">
+            <ul class="footer-number">
+                <li><span>1544-1234</span></li>
+            </ul>
+            <ul class="footer-time">
+                <li><span>고객센터</span></li>
+                <li><span>|</span></li>
+                <li><span>평일 10:00~17:00 (토/일/공휴일 휴무)</span></li>
+                <li><span>|</span></li>
+                <li><span>점심시간 12:00~13:30</span></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+</html>
